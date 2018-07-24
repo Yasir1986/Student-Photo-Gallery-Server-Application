@@ -112,9 +112,9 @@ app.get('/students/add-student', (req, res) => {
 });
 
 
-app.get ("/details/:index" , (req, res) =>{
-    res.render("details", {student: Api.data[req.params.index]})
-});
+// app.get ("/details/:index" , (req, res) =>{
+//     res.render("details", {student: Api.data[req.params.index]})
+// });
 
 
 
