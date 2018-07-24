@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Integrify Student Photo Gallery Server Application</title>
+</head>
+<body>
+
+
+    <div id="root">
+        
+        <h1>Integrify Student Photo Gallery Server Application</h1>
+        <h2>Powered by Ejs!</h2>
+
+        <ul>
+            <li><a class="active" href="/">Home</a></li>
+            <li><a href="/Api">API</a></li>
+            <li><a href="/students/add-student">Add New Student</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+
+
+    <div class="container">
+
+            <% Api.data.map((Api, index ) => { %>
+           
+             <div class="image-container">
+
+             <%= Api.firstName %> 
+             <%= Api.lastName %> 
+             <a href="/details/<%= index %>"><img class="images"  
+                onerror="this.onerror=null;
+                this.src='images/noimage.png';" 
+                src="/images/<%= Api.src %>" /> </a> </div>
+             <% }) %>  
+             
+
+    </div>
+       
+    </div>
+
+    <p class="footer">  Copyright 2018 @ Y@$IR. All rights reserved </p>
+
+
+</body>
+</html>

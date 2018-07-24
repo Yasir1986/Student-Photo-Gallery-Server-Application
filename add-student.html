@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Add-Students</title>
+</head>
+<body>
+    <h1>Add Students</h1>
+
+    <ul>
+            <li><a class="active" href="/">Home</a></li>
+            <li><a href="/Api">API</a></li>
+            <li><a href="/students/add-student">Add New Student</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+
+
+    <form 
+
+        action="/students/add-student" 
+        method="POST" 
+        enctype="multipart/form-data"
+        id='uploadForm' >
+    
+      <label>First Name</label>
+      <br>
+      <input name="firstName" text="FirstName" type="text">
+      <br>
+      <label>Last Name</label>
+      <br>
+      <input name="lastName" text="LastName" type="text">
+      <br>
+      <label>Title</label>
+      <br>
+      <input name="title" text="Title" type="text">
+      <br>
+      <label>Nationality</label>
+      <br>
+      <input name="nationality" text="Nationality" type="text">
+      <br>
+      <label>Skills</label>
+      <br>
+      <textarea name="skills" text="Skills" rows="10" cols="21">Write your Skills here:</textarea>
+      <br>
+      <label>Why SoftwareDeveloper</label>
+      <br>
+      <input name="whySofterDeveloper" text="WhySoftwareDeveloper" type="text">
+      <br>
+      <label>LongTermVision</label>
+      <br>
+      <input name="longTermVision" text="LongTermVision" type="text">
+      <br>
+      <label>MotivatesMe</label>
+      <br>
+      <input name="motivatesMe" text="MotivatesMe" type="text">
+      <br>
+      <label>FavouiteQuote</label>
+      <br>
+      <input name="favoriteQuote" name="FavouiteQuote" type="text">
+      <br>
+      <label>JoinedOn</label>
+      <br>
+      <input name="joinedOn" text="JoinedOn" type="text">
+      <br>
+      <br>
+      <br>
+        <input type="file" name="sampleFile" />
+        <input type='submit' value='Upload!' />
+    </form>  
+
+
+        
+     <p class="footer">  Copyright 2018 @ Y@$IR. All rights reserved </p>
+
+</body>
+</html>
