@@ -8,7 +8,6 @@ const Api = require('./data');
 const url = require("url");
 const nodemailer = require('nodemailer');
 
-
 app.use(bodyParser.json());
 app.use(express.static("views"));
 
@@ -76,10 +75,7 @@ app.post('/contact', function(req,res) {
           res.end();
         }
       });
-
-    //   res.sendFile(__dirname + "/" + "contact.html");
     });
-
 
 
 app.get('/students/add-student', (req, res) => {
@@ -90,15 +86,10 @@ app.get('/students/add-student', (req, res) => {
     app.post ("/students/add-student", (req,res) => {
 
         console.log(req.files.sampleFile.firstName)
-
-       
-
         if   (!req.files)
             return res.status(400).send("No files were uploaded.");
-
              let sampleFile = req.files.sampleFile;
-
-    sampleFile.mv(__dirname + "/assets/images/" + req.body.firstName + ".jpg" , function(err) {
+        sampleFile.mv(__dirname + "/assets/images/" + req.body.firstName + ".jpg" , function(err) {
         if (err)
         return res.status(500).send(err);
 
@@ -110,12 +101,6 @@ app.get('/students/add-student', (req, res) => {
 
     });
 });
-
-
-// app.get ("/details/:index" , (req, res) =>{
-//     res.render("details", {student: Api.data[req.params.index]})
-// });
-
 
 
 app.listen(port, () => {
